@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ML API</title>
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="bbb">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Myers-Briggs Prediction</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav ">
+              <li class="nav-item dropdown active">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Learn More
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href={{ url_for('background', filename='background.html') }} target="_blank">Background</a>
+                  <a class="dropdown-item" href="/" target="_blank">Results</a>
+                  <a class="dropdown-item" href="{{url_for('analysis', filename='analysis.html') }}" target="_blank">Analysis</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" target="_blank" href={{ url_for('predict', filename='prediction.html') }}>Predict</a>
+              </li>
+            </ul>
+        </div>
+      </div>  
+    </nav>
+    
+  
+   <div class="login">
+      <h3>Predict Personality</h3>
+       <!-- Main Input For Receiving Query to our ML -->
+       <!-- predict function-->
+      <form action="{{ url_for('predict')}}" method='post'>
+        <h5>1. You are totally exhausted because your week was endless and less than great. How are you going to spend your weekend?</h5>
+        <!--required means no text, no submit-->
+        <input type="text" name="posts" placeholder="comments" required="required" />
+        <h5>2. A competitor of your current employer is trying to entice you. You have doubts because the salary is much higher there, but the staff here is great. Moreover, the head of your department hinted that he will recommend you to the bosses when he retires. How are you going to make a decision?</h5>
+        <input type="text" name="test_score" placeholder="comments" required="required" />
+        <h5>3. Only 2 weeks are left before your close friends' wedding. How are the preparations going?</h5>
+        <input type="text" name="interview_score" placeholder="comments" required="required" />
+  
+          <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      </form>
+  
+     <br>
+     <br>
+     <div >
+  
+       <!-- list-style: none no dot -->
+        <ul style="list-style: none;" class='liststyle'>
+          {% for x in prediction_text%}
+                <li class='listyle'>{{ x }}</li>
+          {% endfor %}      
+        </ul>
+        <!-- <ul style="list-style: none;" class='liststyle'>
+          {% for x in test_result %}
+                <li>{{ x }}</li>
+          {% endfor %}      
+        </ul> -->
+     </div>
+     
+  
+   </div>
+
+  </div>
+  
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
