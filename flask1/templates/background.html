@@ -4,13 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Myers-Briggs Prediction</title>
-  <!-- <link rel="stylesheet" href="final.css"> -->
+  <title>Myers-Briggs Personality Indicator</title>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}"> -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.0.0/math.min.js"></script>
@@ -52,9 +50,6 @@
                     <a class="dropdown-item" href="analysis.html" target="_blank">Analysis</a>
                   </div>
                 </li>
-                <!-- <li class="nav-item ">
-                  <a class="nav-link" href="comparison.html">Comparisons </a>
-                </li> -->
                 <li class="nav-item">
                   <a class="nav-link" target="_blank" href="prediction.html/">Predict</a>
                 </li>
@@ -97,70 +92,68 @@
               </div>
 
               <hr>
-              <p>The Myers–Briggs Type Indicator (MBTI) is a pseudoscientific introspective personality test indicating differing psychological preferences in how people perceive the world and make decisions.</p>
-                <p>The MBTI is the most popular personality test in the world. More than two million people take it every year. It is used in twenty-six countries to assess employees, students, soldiers, and potential marriage partners. It is used by Fortune 500 companies and universities, in self-improvement seminars and wellness retreats.</p>
-                <p>The MBTI was constructed by Katharine Cook Briggs and her daughter Isabel Briggs Myers and they based it on the theory that was proposed by Carl Jung. He had speculated that people experience the world using four principal psychological functions – sensation, intuition, feeling, and thinking – and that one of these four functions is dominant for a person most of the time.
-                <p>The four categories in the MBTI are Introversion/Extraversion, Sensing/Intuition, Thinking/Feeling, Judging/Perceiving. Each person is said to have one preferred quality from each category, producing 16 unique types. The underlying assumption of the MBTI is that we all have specific preferences in the way we interpret our experiences, and these preferences underlie our interests, needs, values, and motivation.</p>
+              <p class="text-justify">The Myers–Briggs Type Indicator (MBTI) is a pseudoscientific introspective personality test indicating differing psychological preferences in how people perceive the world and make decisions.</p>
+                <p class="text-justify">The MBTI is the most popular personality test in the world. More than two million people take it every year. It is used in twenty-six countries to assess employees, students, soldiers, and potential marriage partners. It is used by Fortune 500 companies and universities, in self-improvement seminars and wellness retreats.</p>
+                <p class="text-justify">The MBTI was constructed by Katharine Cook Briggs and her daughter Isabel Briggs Myers and they based it on the theory that was proposed by Carl Jung. He had speculated that people experience the world using four principal psychological functions – sensation, intuition, feeling, and thinking – and that one of these four functions is dominant for a person most of the time.
+                <p class="text-justify">The four categories in the MBTI are Introversion/Extraversion, Sensing/Intuition, Thinking/Feeling, Judging/Perceiving. Each person is said to have one preferred quality from each category, producing 16 unique types. The underlying assumption of the MBTI is that we all have specific preferences in the way we interpret our experiences, and these preferences underlie our interests, needs, values, and motivation.</p>
                 <br>
-
-                <p>The first pair of psychological preferences is Extraversion and Introversion. It analyses if a person likes to spend time in the outer world of people and things, or in their inner world of ideas and images.</p>
+                <p class="text-justify">The first pair of psychological preferences is Extraversion and Introversion. It analyses if a person likes to spend time in the outer world of people and things, or in their inner world of ideas and images.</p>
                 <div class="container-fluid">
-                    <img src="Images\Extrovert.png" alt="Extrovert" class="float-left" width="115" height="115" padding-right:50px>
+                    <img src="Images\Extrovert.png" alt="Extrovert" class="float-left" width="115" height="115" style="margin-right:20px;">
                     <h5>Extraversion (E)</h5>
-                    <p>Extroverts get their energy from active involvement in events and having a lot of different activities. They are excited when they are around people and like to energize other people. They are usually trying to make things happen by moving into action. They often understand a problem better by being very vocal about it and hear what others have to say.</p>
+                    <p class="text-justify">Extroverts get their energy from active involvement in events and having a lot of different activities. They are excited when they are around people and like to energize other people. They are usually trying to make things happen by moving into action. They often understand a problem better by being very vocal about it and hear what others have to say.</p>
                 </div>
                 <br>
                 <div class="container-fluid">
-                    <img src="Images\Introvert.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src="Images\Introvert.png" alt="Introvert" class="float-left" width="115" height="115" style="margin-right:20px;">
                     <h5>Introversion (I)</h5>
-                    <p>Introverts get their energy from dealing with the ideas, pictures, memories, and reactions that are in their thoughts, in their inner world. They often prefer doing things alone or with one or two people with whom they are comfortable with. They usually decide to act only after they have taken the time to clearly reflect on their course of action.</p>  
+                    <p class="text-justify">Introverts get their energy from dealing with the ideas, pictures, memories, and reactions that are in their thoughts, in their inner world. They often prefer doing things alone or with one or two people with whom they are comfortable with. They usually decide to act only after they have taken the time to clearly reflect on their course of action.</p>  
                 </div>
                 <br>
 
-                <p>The second pair of psychological preferences is Sensing and Intuition. It is based on whether a person pays more attention to information that comes in through the five senses, or to the patterns and possibilities they see in the information that is presented.</p>
+                <p class="text-justify">The second pair of psychological preferences is Sensing and Intuition. It is based on whether a person pays more attention to information that comes in through the five senses, or to the patterns and possibilities they see in the information that is presented.</p>
                 <div class="container-fluid">
-                    <img src="Images\Sensors.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src="Images\Sensors.png" alt="Sensor" class="float-left" width="115" height="115" style="margin-right:20px;">
                     <h5>Sensing (S)</h5>
-                    <p>Sensors pay attention to what they see, hear, touch, taste, and smell - paying attention to physical reality. They are more concerned with what is actual, present, current, and real. They prefer practicality and perform best when they are able to corelate knowledge with its usability. They tend to notice facts and remember details that are important to them.</p>
+                    <p class="text-justify">Sensors pay attention to what they see, hear, touch, taste, and smell - paying attention to physical reality. They are more concerned with what is actual, present, current, and real. They prefer practicality and perform best when they are able to corelate knowledge with its usability. They tend to notice facts and remember details that are important to them.</p>
                 </div>
                 <br>
                 <div class="container-fluid">
-                    <img src="Images\Intuitive.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src="Images\Intuitive.png" alt="Intuitive" class="float-left" width="115" height="115" style="margin-right:20px;">
                     <h5>Intuition (N)</h5>
-                    <p>Intuitives tend to pay most attention to impressions or the meaning and patterns of the information that they receive. They would rather learn by thinking a problem through than by hands-on experience. They tend to think more about the future and all its possibilities.They tend to remember events more as an impression of what it was like than as actual facts or details of what happened.</p>
+                    <p class="text-justify">Intuitives tend to pay most attention to impressions or the meaning and patterns of the information that they receive. They would rather learn by thinking a problem through than by hands-on experience. They tend to think more about the future and all its possibilities.They tend to remember events more as an impression of what it was like than as actual facts or details of what happened.</p>
                 </div>
                 <br>
 
-                <p>The third preference pair describes how a person prefers to make decisions. Do they like to put more weight on objective principles and impersonal facts or do they put more weight on personal concerns and the people involved?</p>
+                <p class="text-justify">The third preference pair describes how a person prefers to make decisions. Do they like to put more weight on objective principles and impersonal facts or do they put more weight on personal concerns and the people involved?</p>
                 <div class="container-fluid">
-                    <img src="Images\Thinkers.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src="Images\Thinkers.png" alt="Thinker" class="float-left" width="115" height="115" style="margin-right:20px;">
                     <h5>Thinking (T)</h5>
-                    <p>Thinkers prefer to find the basic truth or principle to be applied while making a decision, regardless of the specific situation involved. They are the ones to analyze the advantages and disadvantages, and then be consistent and logical in deciding. They tend to not let their own wishes or others thoughts influence them.</p>
+                    <p class="text-justify">Thinkers prefer to find the basic truth or principle to be applied while making a decision, regardless of the specific situation involved. They are the ones to analyze the advantages and disadvantages, and then be consistent and logical in deciding. They tend to not let their own wishes or others thoughts influence them.</p>
                 </div>
                 <br>
                 <div class="container-fluid">
-                    <img src="Images\Feelers.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src="Images\Feelers.png" alt="Feeler" class="float-left" width="115" height="115" style="margin-right:20px;">
                     <h5>Feeling (F)</h5>
-                    <p>Feelers tend to weigh what others care about and believe in, expecially those that are involved in the situation before making a decision. They are more concerned with values and what is the best for the people involved and thus tend to establish and maintain harmony. They are usually the most caring, warm, and tactful people to be around.</p>
+                    <p class="text-justify">Feelers tend to weigh what others care about and believe in, expecially those that are involved in the situation before making a decision. They are more concerned with values and what is the best for the people involved and thus tend to establish and maintain harmony. They are usually the most caring, warm, and tactful people to be around.</p>
                 </div>
                 <br>
 
-                <p>The fourth preference pair describes how a person likes to live their outer life; what are the behaviors others tend to see? Does the person prefer a more structured and decided lifestyle or a more flexible and adaptable lifestyle?</p>
+                <p class="text-justify">The fourth preference pair describes how a person likes to live their outer life; what are the behaviors others tend to see? Does the person prefer a more structured and decided lifestyle or a more flexible and adaptable lifestyle?</p>
                 <div class="container-fluid">
-                    <img src="Images\Judgers.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src="Images\Judgers.png" alt="Judger" class="float-left" width="115" height="115" style="margin-right:20px;">
                     <h5>Judging (J)</h5>
-                    <p>Judgers use their decision-making preference (Thinking/Feeling) in their outer life. To others, they seem to prefer a planned or orderly way of life, like to have things settled and organized, feel more comfortable when decisions are made, and like to bring life under control as much as possible.</p>
+                    <p class="text-justify">Judgers use their decision-making preference (Thinking/Feeling) in their outer life. To others, they seem to prefer a planned or orderly way of life, like to have things settled and organized, feel more comfortable when decisions are made, and like to bring life under control as much as possible.</p>
                 </div>
                 <br>    
                 <div class="container-fluid">
-                    <img src="Images\Perceivers.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src="Images\Perceivers.png" alt="Perceiver" class="float-left" width="115" height="115" style="margin-right:20px;">
                     <h5>Perceiving (P)</h5>
-                    <p>Perceivers use their perceiving function (Sensing/Intuition) in their outer life. To others, they seem to prefer a flexible and spontaneous way of life, and like to understand and adapt to the world rather than organize it. They tend to be open to new experiences and information.</p>
+                    <p class="text-justify">Perceivers use their perceiving function (Sensing/Intuition) in their outer life. To others, they seem to prefer a flexible and spontaneous way of life, and like to understand and adapt to the world rather than organize it. They tend to be open to new experiences and information.</p>
                 </div>
                 <br>
                 <br>
-                <br>
-                <br>
+
           </div>
         </div>
       </div>
@@ -189,7 +182,7 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        position: fixed}
+        position: relative}
     </style>
 </footer>
 
