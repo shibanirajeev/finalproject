@@ -45,18 +45,14 @@
                 <li class="nav-item dropdown active">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Learn More
-                  </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="background.html" target="_blank">Background</a>
-                    <a class="dropdown-item" href="results.html" target="_blank">Results</a>
-                    <a class="dropdown-item" href="analysis.html" target="_blank">Analysis</a>
+                    <a class="dropdown-item" href={{ url_for('background', filename='background.html') }} target="_blank">Background</a>
+                    <a class="dropdown-item" href="/" target="_blank">Results</a>
+                    <a class="dropdown-item" href="{{url_for('analysis', filename='analysis.html') }}" target="_blank">Analysis</a>
                   </div>
                 </li>
-                <!-- <li class="nav-item ">
-                  <a class="nav-link" href="comparison.html">Comparisons </a>
-                </li> -->
                 <li class="nav-item">
-                  <a class="nav-link" target="_blank" href="prediction.html/">Predict</a>
+                  <a class="nav-link" target="_blank" href={{ url_for('predict', filename='prediction.html') }}>Predict</a>
                 </li>
               </ul>
           </div>
@@ -71,19 +67,19 @@
               <div id="carouselControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img class="d-block w-100" src="Images\Slideshow\image1.jpg" alt="Carl Jung Quote">
+                    <img class="d-block w-100" src={{ url_for('analysis', path='Images\Slideshow\image1.jpg') }} alt="Carl Jung Quote">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="Images\Slideshow\image2.jpg" alt="Isabel Briggs Myers Quote">
+                    <img class="d-block w-100" src={{ url_for('analysis', path='Images\Slideshow\image2.jpg') }} alt="Isabel Briggs Myers Quote">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="Images\Slideshow\image3.jpg" alt="Carl Jung Quote">
+                    <img class="d-block w-100" src={{ url_for('analysis', path='Images\Slideshow\image3.jpg') }} alt="Carl Jung Quote">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="Images\Slideshow\image4.jpg" alt="Isabel Briggs Myers Quote">
+                    <img class="d-block w-100" src={{ url_for('analysis', path='Images\Slideshow\image4.jpg') }} alt="Isabel Briggs Myers Quote">
                   </div>
                   <div class="carousel-item">
-                    <img class="d-block w-100" src="Images\Slideshow\image5.jpg" alt="Carl Jung Quote">
+                    <img class="d-block w-100" src={{ url_for('analysis', path='Images\Slideshow\image5.jpg') }} alt="Carl Jung Quote">
                   </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
@@ -105,13 +101,13 @@
 
                 <p>The first pair of psychological preferences is Extraversion and Introversion. It analyses if a person likes to spend time in the outer world of people and things, or in their inner world of ideas and images.</p>
                 <div class="container-fluid">
-                    <img src="Images\Extrovert.png" alt="Extrovert" class="float-left" width="115" height="115" padding-right:50px>
+                    <img src={{ url_for('analysis', path='Images\Extrovert.png') }} alt="Extrovert" class="float-left" width="115" height="115" padding-right:50px>
                     <h5>Extraversion (E)</h5>
                     <p>Extroverts get their energy from active involvement in events and having a lot of different activities. They are excited when they are around people and like to energize other people. They are usually trying to make things happen by moving into action. They often understand a problem better by being very vocal about it and hear what others have to say.</p>
                 </div>
                 <br>
                 <div class="container-fluid">
-                    <img src="Images\Introvert.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src={{ url_for('analysis', path='Images\Introvert.png') }} alt="Introvert" class="float-left" width="115" height="115">
                     <h5>Introversion (I)</h5>
                     <p>Introverts get their energy from dealing with the ideas, pictures, memories, and reactions that are in their thoughts, in their inner world. They often prefer doing things alone or with one or two people with whom they are comfortable with. They usually decide to act only after they have taken the time to clearly reflect on their course of action.</p>  
                 </div>
@@ -119,13 +115,13 @@
 
                 <p>The second pair of psychological preferences is Sensing and Intuition. It is based on whether a person pays more attention to information that comes in through the five senses, or to the patterns and possibilities they see in the information that is presented.</p>
                 <div class="container-fluid">
-                    <img src="Images\Sensors.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src={{ url_for('analysis', path='Images\Sensors.png') }} alt="Introvert" class="float-left" width="115" height="115">
                     <h5>Sensing (S)</h5>
                     <p>Sensors pay attention to what they see, hear, touch, taste, and smell - paying attention to physical reality. They are more concerned with what is actual, present, current, and real. They prefer practicality and perform best when they are able to corelate knowledge with its usability. They tend to notice facts and remember details that are important to them.</p>
                 </div>
                 <br>
                 <div class="container-fluid">
-                    <img src="Images\Intuitive.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src={{ url_for('analysis', path='Images\Intuitive.png') }} alt="Introvert" class="float-left" width="115" height="115">
                     <h5>Intuition (N)</h5>
                     <p>Intuitives tend to pay most attention to impressions or the meaning and patterns of the information that they receive. They would rather learn by thinking a problem through than by hands-on experience. They tend to think more about the future and all its possibilities.They tend to remember events more as an impression of what it was like than as actual facts or details of what happened.</p>
                 </div>
@@ -133,13 +129,13 @@
 
                 <p>The third preference pair describes how a person prefers to make decisions. Do they like to put more weight on objective principles and impersonal facts or do they put more weight on personal concerns and the people involved?</p>
                 <div class="container-fluid">
-                    <img src="Images\Thinkers.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src={{ url_for('analysis', path='Images\Thinkers.png') }} alt="Introvert" class="float-left" width="115" height="115">
                     <h5>Thinking (T)</h5>
                     <p>Thinkers prefer to find the basic truth or principle to be applied while making a decision, regardless of the specific situation involved. They are the ones to analyze the advantages and disadvantages, and then be consistent and logical in deciding. They tend to not let their own wishes or others thoughts influence them.</p>
                 </div>
                 <br>
                 <div class="container-fluid">
-                    <img src="Images\Feelers.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src={{ url_for('analysis', path='Images\Feelers.png') }} alt="Introvert" class="float-left" width="115" height="115">
                     <h5>Feeling (F)</h5>
                     <p>Feelers tend to weigh what others care about and believe in, expecially those that are involved in the situation before making a decision. They are more concerned with values and what is the best for the people involved and thus tend to establish and maintain harmony. They are usually the most caring, warm, and tactful people to be around.</p>
                 </div>
@@ -147,13 +143,13 @@
 
                 <p>The fourth preference pair describes how a person likes to live their outer life; what are the behaviors others tend to see? Does the person prefer a more structured and decided lifestyle or a more flexible and adaptable lifestyle?</p>
                 <div class="container-fluid">
-                    <img src="Images\Judgers.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src={{ url_for('analysis', path='Images\Judgers.png') }} alt="Introvert" class="float-left" width="115" height="115">
                     <h5>Judging (J)</h5>
                     <p>Judgers use their decision-making preference (Thinking/Feeling) in their outer life. To others, they seem to prefer a planned or orderly way of life, like to have things settled and organized, feel more comfortable when decisions are made, and like to bring life under control as much as possible.</p>
                 </div>
                 <br>    
                 <div class="container-fluid">
-                    <img src="Images\Perceivers.png" alt="Introvert" class="float-left" width="115" height="115">
+                    <img src={{ url_for('analysis', path='Images\Perceivers.png') }} alt="Introvert" class="float-left" width="115" height="115">
                     <h5>Perceiving (P)</h5>
                     <p>Perceivers use their perceiving function (Sensing/Intuition) in their outer life. To others, they seem to prefer a flexible and spontaneous way of life, and like to understand and adapt to the world rather than organize it. They tend to be open to new experiences and information.</p>
                 </div>
