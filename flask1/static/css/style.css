@@ -12,7 +12,7 @@
 * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; -o-box-sizing:border-box; box-sizing:border-box; }
 
 /*!!!! must use scroll*/
-html { width: 100%; height:200%; overflow-y: scroll; overflow-x:hidden;  }
+html { width: 100%; height:200%; overflow-y: scroll; /*overflow-x:scroll;*/  }
 
 body { 
 	width: 100%;
@@ -73,10 +73,6 @@ form h5 {
 	padding-bottom: 5px;
 	font-size: 16px;
 
-}
-
-#viz1595532283990{
-	width: 1200px !important;
 }
 
 .login h5 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:justify; }

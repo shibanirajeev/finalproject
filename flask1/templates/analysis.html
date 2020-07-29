@@ -32,7 +32,7 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="bbb">
         <div class="container-fluid">
-          <a class="navbar-brand" href="http://localhost:5000/">Myers-Briggs Personality Indicator</a>
+          <a class="navbar-brand" href="/">Myers-Briggs Personality Indicator</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -43,13 +43,13 @@
                   Learn More
                   </a>
                   <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="background.html" target="_blank">Background</a>
-                    <a class="dropdown-item" href="results.html" target="_blank">Results</a>
-                    <a class="dropdown-item" href="analysis.html" target="_blank">Analysis</a>
+                    <a class="dropdown-item" href= "/" target="_blank">Background</a>
+                    <a class="dropdown-item" href={{url_for('analysis', filename='analysis.html') }} target="_blank">Analysis</a>
+                    <a class="dropdown-item" href={{ url_for('results', filename='results.html') }} target="_blank">Results</a>
                   </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" target="_blank" href="prediction.html/">Predict</a>
+                  <a class="nav-link" target="_blank" href={{ url_for('predict', filename='prediction.html') }}>Predict</a>
                 </li>
               </ul>
           </div>
@@ -65,7 +65,7 @@
               <br>
               <h4>Methodology</h4>
               <br>
-              <img class="d-block w-100" src="Images\flowchart-methodology overview.png" alt="Flowchart">
+              <img class="d-block w-100" src='image/Images/flowchart-methodology overview.png' alt="Flowchart">
               <br>
               <p class="text-justify">The goal of our project is to try to predict the personality type of individuals based on some text input.</p>
               <p class="text-justify">The dataset contains over 8600 rows and has 2 columns: type of Myers-Briggs personality 4-letter code and section of each of the last 50 things posted. The classification methods used to train and test the data were: </p>
@@ -109,7 +109,7 @@
     </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
