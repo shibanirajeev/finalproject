@@ -8,7 +8,7 @@ import joblib
 
 app = Flask(__name__) 
 
-scaler = joblib.load( "scaler.save")
+scaler = joblib.load("scaler.save")
 modelIE = load_model("modelIE.h5")
 modelNS = load_model("model_testNS.h5")
 

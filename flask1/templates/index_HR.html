@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Myers-Briggs Results</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+      #bbb {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+    </style>
+    
+  </head>
+
+
+  <body>
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="bbb">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="http://localhost:5000/">Myers-Briggs Personality Indicator</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+              <ul class="navbar-nav ">
+                <li class="nav-item dropdown active">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Learn More
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="background.html" target="_blank">Background</a>
+                    <a class="dropdown-item" href="results.html" target="_blank">Results</a>
+                    <a class="dropdown-item" href="analysis.html" target="_blank">Analysis</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" target="_blank" href="prediction.html/">Predict</a>
+                </li>
+              </ul>
+          </div>
+        </div>  
+    </nav>
+    
+      <div class = "login">
+
+
+          <!-- Tableau javascript API   -->
+        <div id = "vizContainer" max-width: 100%; max-height: 150%></div>                   
+        <script src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+        <script>
+          var viz
+          function initViz() {
+          var containerDiv = document.getElementById("vizContainer"),
+          url = "https://public.tableau.com/views/finalproject_15954706232460/Story1?:language=en&:display_count=y&:origin=viz_share_link";
+
+          viz = new tableau.Viz(containerDiv, url);
+        }
+        initViz();
+        </script>
+
+        <div class='tableauPlaceholder' id='viz1595532283990' style='position: relative'>
+          <noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fi&#47;finalproject_15954706232460&#47;Story1&#47;1_rss.png' style='border: none' /></a></noscript>
+          <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> 
+            <param name='site_root' value='' />
+            <param name='name' value='finalproject_15954706232460&#47;Story1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;fi&#47;finalproject_15954706232460&#47;Story1&#47;1.png' /> 
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' /><param name='language' value='en' />
+            <param name='filter' value='publish=yes' />
+          </object>
+          <br>
+        </div>
+        
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>  
+      </div>
+    </div>        
+  </body>
+
+  <footer class="page-footer font-small blue fixed-bottom">
+    <p>Copyright Hephzibah, Leon, Olivia & Shibani &#169; 2020 All rights reserved</p>   
+    <style>
+      footer{
+        background-color: #353a40; 
+        border-top-style: solid; 
+        border-top-color: #034946;
+        color: white; 
+        min-height: 20px; 
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px; 
+        text-align: center; 
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        position: relative}
+    </style>
+  </footer>
+</html>
